@@ -7,6 +7,9 @@ I.e., **handle*s* are the things that look like these:
 * `@reiver.bsky.social`
 * `@pfrazee.com`
 
+**AT-Protocol** handles are defined here:
+https://atproto.com/specs/handle
+
 ## Documention
 
 Online documentation, which includes examples, can be found at: http://godoc.org/github.com/reiver/go-athndl
