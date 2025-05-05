@@ -89,6 +89,129 @@ func TestValidate(t *testing.T) {
 			Handle:                         "host.onion",
 			ExpectedError: `atproto: handle "host.onion" is invalid because it contains a disallowed TLD`,
 		},
+
+
+
+		{
+			Handle:                         "host.ALT",
+			ExpectedError: `atproto: handle "host.ALT" is invalid because it contains a disallowed TLD`,
+		},
+		{
+			Handle:                         "host.ARPA",
+			ExpectedError: `atproto: handle "host.ARPA" is invalid because it contains a disallowed TLD`,
+		},
+		{
+			Handle:                         "host.EXAMPLE",
+			ExpectedError: `atproto: handle "host.EXAMPLE" is invalid because it contains a disallowed TLD`,
+		},
+		{
+			Handle:                         "host.INTERNAL",
+			ExpectedError: `atproto: handle "host.INTERNAL" is invalid because it contains a disallowed TLD`,
+		},
+		{
+			Handle:                         "host.INVALID",
+			ExpectedError: `atproto: handle "host.INVALID" is invalid because it contains a disallowed TLD`,
+		},
+		{
+			Handle:                         "host.LOCAL",
+			ExpectedError: `atproto: handle "host.LOCAL" is invalid because it contains a disallowed TLD`,
+		},
+		{
+			Handle:                         "host.LOCALHOST",
+			ExpectedError: `atproto: handle "host.LOCALHOST" is invalid because it contains a disallowed TLD`,
+		},
+		{
+			Handle:                         "host.ONION",
+			ExpectedError: `atproto: handle "host.ONION" is invalid because it contains a disallowed TLD`,
+		},
+
+
+
+		{
+			Handle:                         "jo@hn.test",
+			ExpectedError: `atproto: handle "jo@hn.test" is invalid because does not fit the valid atproto-handle syntax`,
+		},
+		{
+			Handle:                         "💩.test",
+			ExpectedError: `atproto: handle "💩.test" is invalid because does not fit the valid atproto-handle syntax`,
+		},
+		{
+			Handle:                         "john..test",
+			ExpectedError: `atproto: handle "john..test" is invalid because does not fit the valid atproto-handle syntax`,
+		},
+		{
+			Handle:                         "xn--bcher-.tld",
+			ExpectedError: `atproto: handle "xn--bcher-.tld" is invalid because does not fit the valid atproto-handle syntax`,
+		},
+		{
+			Handle:                         "john.0",
+			ExpectedError: `atproto: handle "john.0" is invalid because does not fit the valid atproto-handle syntax`,
+		},
+		{
+			Handle:                         "cn.8",
+			ExpectedError: `atproto: handle "cn.8" is invalid because does not fit the valid atproto-handle syntax`,
+		},
+		{
+			Handle:                         "www.masełkowski.pl.com",
+			ExpectedError: `atproto: handle "www.masełkowski.pl.com" is invalid because does not fit the valid atproto-handle syntax`,
+		},
+		{
+			Handle:                         "org",
+			ExpectedError: `atproto: handle "org" is invalid because does not fit the valid atproto-handle syntax`,
+		},
+		{
+			Handle:                         "name.org.",
+			ExpectedError: `atproto: handle "name.org." is invalid because does not fit the valid atproto-handle syntax`,
+		},
+
+
+
+		{
+			Handle:                         "jo@hn.TEST",
+			ExpectedError: `atproto: handle "jo@hn.TEST" is invalid because does not fit the valid atproto-handle syntax`,
+		},
+		{
+			Handle:                         "💩.TEST",
+			ExpectedError: `atproto: handle "💩.TEST" is invalid because does not fit the valid atproto-handle syntax`,
+		},
+		{
+			Handle:                         "john..TEST",
+			ExpectedError: `atproto: handle "john..TEST" is invalid because does not fit the valid atproto-handle syntax`,
+		},
+		{
+			Handle:                         "xn--bcher-.TLD",
+			ExpectedError: `atproto: handle "xn--bcher-.TLD" is invalid because does not fit the valid atproto-handle syntax`,
+		},
+
+
+
+		{
+			Handle:                         "2gzyxa5ihm7nsggfxnu52rck2vv4rvmdlkiu3zzui5du4xyclen53wid.onion",
+			ExpectedError: `atproto: handle "2gzyxa5ihm7nsggfxnu52rck2vv4rvmdlkiu3zzui5du4xyclen53wid.onion" is invalid because it contains a disallowed TLD`,
+		},
+		{
+			Handle:                         "laptop.local",
+			ExpectedError: `atproto: handle "laptop.local" is invalid because it contains a disallowed TLD`,
+		},
+		{
+			Handle:                         "blah.arpa",
+			ExpectedError: `atproto: handle "blah.arpa" is invalid because it contains a disallowed TLD`,
+		},
+
+
+
+		{
+			Handle:                         "2gzyxa5ihm7nsggfxnu52rck2vv4rvmdlkiu3zzui5du4xyclen53wid.ONION",
+			ExpectedError: `atproto: handle "2gzyxa5ihm7nsggfxnu52rck2vv4rvmdlkiu3zzui5du4xyclen53wid.ONION" is invalid because it contains a disallowed TLD`,
+		},
+		{
+			Handle:                         "laptop.LOCAL",
+			ExpectedError: `atproto: handle "laptop.LOCAL" is invalid because it contains a disallowed TLD`,
+		},
+		{
+			Handle:                         "blah.ARPA",
+			ExpectedError: `atproto: handle "blah.ARPA" is invalid because it contains a disallowed TLD`,
+		},
 	}
 
 	for testNumber, test := range tests {
@@ -137,16 +260,16 @@ func TestValidate_success(t *testing.T) {
 
 
 		{
-			Handle:                         "강.kr",
+			Handle:                         "xn--939a.kr",
 		},
 		{
-			Handle:                         "강.Kr",
+			Handle:                         "xn--939a.Kr",
 		},
 		{
-			Handle:                         "강.kR",
+			Handle:                         "xn--939a.kR",
 		},
 		{
-			Handle:                         "강.KR",
+			Handle:                         "xn--939a.KR",
 		},
 		{
 			Handle:                         "xn--939A.KR",

@@ -2,7 +2,6 @@ package athndl
 
 import (
 	"regexp"
-	"strings"
 
 	"github.com/reiver/go-erorr"
 )
@@ -36,15 +35,14 @@ var regex *regexp.Regexp = regexp.MustCompile(
 	`$`,
 )
 
+// Validate does not [Normalize] the handle before applying the validation rules.
 func Validate(handle string) error {
-	var normalized string = Normalize(handle)
-
-	if !regex.MatchString(normalized) {
+	if !regex.MatchString(handle) {
 		return erorr.Errorf("atproto: handle %q is invalid because does not fit the valid atproto-handle syntax", handle)
 	}
 
 	for _, tld := range disallowedTLDs {
-		if strings.HasSuffix(normalized, tld) {
+		if hasTLD(handle, tld) {
 			return erorr.Errorf("atproto: handle %q is invalid because it contains a disallowed TLD", handle)
 		}
 	}
