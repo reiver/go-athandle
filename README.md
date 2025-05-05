@@ -22,6 +22,36 @@ Online documentation, which includes examples, can be found at: http://godoc.org
 
 [![GoDoc](https://godoc.org/github.com/reiver/go-athndl?status.svg)](https://godoc.org/github.com/reiver/go-athndl)
 
+## Examples
+
+To normalize a **handle** do something similar to:
+
+```golang
+import "github.com/reiver/go-athndl"
+
+// ...
+
+var handle string = "Example.COM"
+
+normalizedHandle := athndl.Normalize(handle)
+
+// normalizedHandle == "example.com"
+```
+
+To validate a **handle** do something similar to:
+
+```golang
+import "github.com/reiver/go-athndl"
+
+// ...
+
+var handle string = "Example.COM"
+
+err := athndl.Validate(handle)
+
+// returns an error if the handle is invalid
+```
+
 ## Import
 
 To import package **athndl** use `import` code like the follownig:
