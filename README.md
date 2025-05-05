@@ -7,7 +7,13 @@ I.e., **handle*s* are the things that look like these:
 * `@reiver.bsky.social`
 * `@pfrazee.com`
 
-**AT-Protocol** handles are defined here:
+Although technically, the **handle** part of those does not include the `@`.
+I.e.:
+
+* `reiver.bsky.social`
+* `pfrazee.com`
+
+**AT-Protocol** **handles** are defined here:
 https://atproto.com/specs/handle
 
 ## Documention
