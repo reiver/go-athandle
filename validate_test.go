@@ -1,9 +1,9 @@
-package athndl_test
+package athandle_test
 
 import (
 	"testing"
 
-	"github.com/reiver/go-athndl"
+	"github.com/reiver/go-athandle"
 )
 
 func TestValidate(t *testing.T) {
@@ -216,7 +216,7 @@ func TestValidate(t *testing.T) {
 
 	for testNumber, test := range tests {
 
-		err := athndl.Validate(test.Handle)
+		err := athandle.Validate(test.Handle)
 		if nil == err {
 			t.Errorf("For test #%d, expected an error but did not actually get one.", testNumber)
 			t.Logf("HANDLE: %s", test.Handle)
@@ -278,7 +278,7 @@ func TestValidate_success(t *testing.T) {
 
 	for testNumber, test := range tests {
 
-		err := athndl.Validate(test.Handle)
+		err := athandle.Validate(test.Handle)
 		if nil != err {
 			t.Errorf("For test #%d, did not expect an error but actually got one.", testNumber)
 			t.Logf("ERROR: %s", err)

@@ -1,4 +1,4 @@
-package athndl
+package athandle
 
 import (
 	"testing"

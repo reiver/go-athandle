@@ -1,9 +1,9 @@
-package athndl_test
+package athandle_test
 
 import (
 	"testing"
 
-	"github.com/reiver/go-athndl"
+	"github.com/reiver/go-athandle"
 )
 
 func TestNormalize(t *testing.T) {
@@ -111,7 +111,7 @@ func TestNormalize(t *testing.T) {
 
 	for testNumber, test := range tests {
 
-		actual := athndl.Normalize(test.Handle)
+		actual := athandle.Normalize(test.Handle)
 		expected := test.Expected
 
 		if expected != actual {

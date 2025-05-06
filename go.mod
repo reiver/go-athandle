@@ -1,4 +1,4 @@
-module github.com/reiver/go-athndl
+module github.com/reiver/go-athandle
 
 go 1.23.4
 

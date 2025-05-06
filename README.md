@@ -1,6 +1,6 @@
-# go-athndl
+# go-athandle
 
-Package **athndl** provides an implementation of **BlueSky**'s **AT-Protocol** **handle** , for the Go programming language.
+Package **athandle** provides an implementation of **BlueSky**'s **AT-Protocol** **handle** , for the Go programming language.
 
 I.e., **handle*s* are the things that look like these:
 
@@ -18,22 +18,22 @@ https://atproto.com/specs/handle
 
 ## Documention
 
-Online documentation, which includes examples, can be found at: http://godoc.org/github.com/reiver/go-athndl
+Online documentation, which includes examples, can be found at: http://godoc.org/github.com/reiver/go-athandle
 
-[![GoDoc](https://godoc.org/github.com/reiver/go-athndl?status.svg)](https://godoc.org/github.com/reiver/go-athndl)
+[![GoDoc](https://godoc.org/github.com/reiver/go-athandle?status.svg)](https://godoc.org/github.com/reiver/go-athandle)
 
 ## Examples
 
 To normalize a **handle** do something similar to:
 
 ```golang
-import "github.com/reiver/go-athndl"
+import "github.com/reiver/go-athandle"
 
 // ...
 
 var handle string = "Example.COM"
 
-normalizedHandle := athndl.Normalize(handle)
+normalizedHandle := athandle.Normalize(handle)
 
 // normalizedHandle == "example.com"
 ```
@@ -41,31 +41,31 @@ normalizedHandle := athndl.Normalize(handle)
 To validate a **handle** do something similar to:
 
 ```golang
-import "github.com/reiver/go-athndl"
+import "github.com/reiver/go-athandle"
 
 // ...
 
 var handle string = "Example.COM"
 
-err := athndl.Validate(handle)
+err := athandle.Validate(handle)
 
 // returns an error if the handle is invalid
 ```
 
 ## Import
 
-To import package **athndl** use `import` code like the follownig:
+To import package **athandle** use `import` code like the follownig:
 ```
-import "github.com/reiver/go-athndl"
+import "github.com/reiver/go-athandle"
 ```
 
 ## Installation
 
-To install package **athndl** do the following:
+To install package **athandle** do the following:
 ```
-GOPROXY=direct go get https://github.com/reiver/go-athndl
+GOPROXY=direct go get https://github.com/reiver/go-athandle
 ```
 
 ## Author
 
-Package **athndl** was written by [Charles Iliya Krempeaux](http://reiver.link)
+Package **athandle** was written by [Charles Iliya Krempeaux](http://reiver.link)
