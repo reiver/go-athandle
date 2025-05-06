@@ -27,10 +27,15 @@ func WellKnownLookup(handle string) (string, error) {
 			return "", erorr.Errorf("athandle: problem creating HTTP-request for HTTP well-known URL %q for handle %q: %w", wellknownurl, handle, err)
 		}
 
+		{
+			err := setUserAgent(req, useragent)
+			if nil != err {
+				return "", erorr.Errorf("athandle: problem setting User-Agent for HTTP-request for HTTP well-known URL %q for handle %q: %w", wellknownurl, handle, err)
+			}
+		}
+
 		req.Header.Add("Accept", "text/plain")
 		req.Header.Add("Connection", "close")
-//@TODO: make the User-Agent configurable.
-		req.Header.Add("User-Agent", "github.com/reiver/go-athandle")
 	}
 
 
