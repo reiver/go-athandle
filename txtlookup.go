@@ -5,7 +5,7 @@ import (
 	"net"
 )
 
-// TXTLookup returns any DIDs registered for the domain-name.
+// TXTLookup returns any DIDs registered for the domain-name, using the special DNS TXT method.
 //
 // Note that, internally TXTLookup calls [TXTSubDomain].
 // You should not call [TXTSubDomain] yourself, if you are calling TXTLookup.
