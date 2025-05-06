@@ -38,12 +38,12 @@ var regex *regexp.Regexp = regexp.MustCompile(
 // Validate does not [Normalize] the handle before applying the validation rules.
 func Validate(handle string) error {
 	if !regex.MatchString(handle) {
-		return erorr.Errorf("atproto: handle %q is invalid because does not fit the valid atproto-handle syntax", handle)
+		return erorr.Errorf("athandle: handle %q is invalid because does not fit the valid atproto-handle syntax", handle)
 	}
 
 	for _, tld := range disallowedTLDs {
 		if hasTLD(handle, tld) {
-			return erorr.Errorf("atproto: handle %q is invalid because it contains a disallowed TLD", handle)
+			return erorr.Errorf("athandle: handle %q is invalid because it contains a disallowed TLD", handle)
 		}
 	}
 
