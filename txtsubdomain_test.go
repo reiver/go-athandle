@@ -6,7 +6,7 @@ import (
 	"github.com/reiver/go-athandle"
 )
 
-func TestTXTSubdomain(t *testing.T) {
+func TestTXTSubDomain(t *testing.T) {
 
 	tests := []struct{
 		DomainName string
