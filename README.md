@@ -24,6 +24,21 @@ Online documentation, which includes examples, can be found at: http://godoc.org
 
 ## Examples
 
+To resolve a **handle** to a **DID** do something similar to:
+
+```golang
+import "github.com/reiver/go-athandle"
+
+// ...
+
+var handle string = "example.com"
+
+did, err := athandle.Resolve(handle)
+
+// did == "did:plc:scewmn2pl3oz36mxme2b6czz"
+
+```
+
 To normalize a **handle** do something similar to:
 
 ```golang
