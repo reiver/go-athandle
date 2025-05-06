@@ -13,6 +13,8 @@ import (
 // For example:
 //
 //	dids, err := athandle.TXTLookup("example.com")
+//
+// If you are not sure whether to use TXTLookup or [Resolve], use [Resolve].
 func TXTLookup(domainname string) ([]string, error) {
 
 	var txtdomainname string = TXTSubDomain(domainname)
