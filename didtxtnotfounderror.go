@@ -6,7 +6,7 @@ import (
 
 var _ error = DIDTXTNotFoundError{}
 
-// DIDTXTNotFoundError is an error that can be returned by [Resolve] if the "_atproto." sub-domain doesn't exist
+// DIDTXTNotFoundError is an error that can be returned by [LookupTXT] if the "_atproto." sub-domain doesn't exist
 // or there are no "did=" DNS TXT records for that sub-domain.
 type DIDTXTNotFoundError struct {
 	txtdomainname string
