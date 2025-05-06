@@ -2,7 +2,7 @@
 
 Package **athandle** provides an implementation of **BlueSky**'s **AT-Protocol** **handle** , for the Go programming language.
 
-I.e., **handle*s* are the things that look like these:
+I.e., **handle**s are the things that look like these:
 
 * `@reiver.bsky.social`
 * `@pfrazee.com`
