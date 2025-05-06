@@ -15,9 +15,9 @@ import (
 //	dids, err := athandle.TXTLookup("example.com")
 //
 // If you are not sure whether to use TXTLookup or [Resolve], use [Resolve].
-func TXTLookup(domainname string) ([]string, error) {
+func TXTLookup(handle string) ([]string, error) {
 
-	var txtdomainname string = TXTSubDomain(domainname)
+	var txtdomainname string = TXTSubDomain(handle)
 
 	// Return all the DNS TXT records for the "_atproto" sub-domain.
 	//

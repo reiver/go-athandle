@@ -19,6 +19,6 @@ package athandle
 //
 // [TXTSubDomain] is called internally by [TXTLookup].
 // You should NOT call pass the sub-domain returned by TXTSubDomain to [TXTLookup].
-func TXTSubDomain(domainname string) string {
-	return "_atproto." + domainname
+func TXTSubDomain(handle string) string {
+	return "_atproto." + handle
 }
