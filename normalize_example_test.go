@@ -16,5 +16,6 @@ func ExampleNormalize() {
 	fmt.Printf("normalized handle: %s\n", normalized)
 
 	// Output:
-	// sdsds
+	// handle:            Reiver.BSky.Social
+	// normalized handle: reiver.bsky.social
 }
